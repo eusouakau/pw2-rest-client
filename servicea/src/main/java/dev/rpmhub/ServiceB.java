@@ -11,9 +11,9 @@ import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 @RegisterRestClient(baseUri = "http://localhost:4444/serviceb")
 public interface ServiceB {
 
-
     @GET
     @Path("/person/{name}")
-    @Produces(MediaType.TEXT_PLAIN)
-    public Person getPerson(@PathParam("name") String name );
+    @Produces(MediaType.APPLICATION_JSON)
+    public Person getPerson(@PathParam("name") String name);
+
 }
