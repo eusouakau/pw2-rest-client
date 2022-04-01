@@ -27,9 +27,6 @@ import org.eclipse.microprofile.rest.client.inject.RestClient;
 @Path("/servicea")
 public class ServiceA {
 
-    // TODO
-    // Por meio de injeção de dependência,
-    // instancie o Rest Cliente para o serviço B
     @Inject
     @RestClient
 
@@ -39,8 +36,6 @@ public class ServiceA {
     @Path("/person/{name}")
     @Produces(MediaType.APPLICATION_JSON)
     public Person getPerson(@PathParam("name") String name){
-        // TODO
-        // Complete o método
         return service.getPerson(name);
     }
 
